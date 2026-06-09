@@ -2,10 +2,6 @@
 
 providers = ["node"]
 
-[phases.setup]
-# Pin Node.js version to Node 20 (matching tsconfig and devDependencies)
-nixPkgs = ["...", "nodejs_20"]
-
 [phases.install]
 # Ensure pnpm is installed and use it for dependency installation
 cmds = ["npm install -g pnpm@10.33.4", "pnpm install --frozen-lockfile"]
